@@ -90,7 +90,7 @@ namespace StickyPlusPlus {
             this.MouseMove += this.stickyForm.DragHandler;
         }
 
-        public NewStickyButton NewStickyButton {
+        public NewStickyButton NewStickyButton { 
             get { return this.newStickyButton; }
         }
     }
@@ -113,8 +113,14 @@ namespace StickyPlusPlus {
 
     public class NewStickyButton : Button {
         public NewStickyButton() {
-            this.Text = "TEST";
+            this.Text = "NEW";
+            this.Click += new EventHandler(this.handleClick);
         }
+
+        private void handleClick(object sender, EventArgs e) {
+            new StickyForm().Show();
+        }
+    
     }
 
 
