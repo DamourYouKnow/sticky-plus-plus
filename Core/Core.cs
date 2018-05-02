@@ -11,6 +11,15 @@ namespace StickyPlusPlus.Core {
 
         private string name;
         private Color color;
+
+        public Sticky() {
+            this.color = LastColor;
+        }
+
+        public string Name {
+            get { return this.name; }
+            set { this.name = value; }
+        }
     }
 
 
